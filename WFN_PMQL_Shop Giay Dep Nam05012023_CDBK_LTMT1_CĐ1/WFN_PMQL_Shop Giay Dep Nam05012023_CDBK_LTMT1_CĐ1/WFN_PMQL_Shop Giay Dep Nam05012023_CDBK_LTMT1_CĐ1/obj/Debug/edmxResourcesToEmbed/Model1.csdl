@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Sản_Phẩm">
+    <Key>
+      <PropertyRef Name="Mã_Sản_Phẩm" />
+    </Key>
+    <Property Name="Mã_Sản_Phẩm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tên_Sản_Phẩm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Năm_Sản_Xuất" Type="Int32" />
+    <Property Name="Đơn_Giá" Type="Double" />
+    <Property Name="Mã_Màu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="BIT_Kho_Hàng" Type="Boolean" />
+    <Property Name="Kho_Hàng" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Ảnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Sản_Phẩm" EntityType="Self.Sản_Phẩm" />
+  </EntityContainer>
+</Schema>

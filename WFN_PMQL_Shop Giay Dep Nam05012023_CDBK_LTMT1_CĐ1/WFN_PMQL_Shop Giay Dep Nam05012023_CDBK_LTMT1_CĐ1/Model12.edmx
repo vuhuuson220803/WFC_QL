@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Sản_Phẩm">
+          <Key>
+            <PropertyRef Name="Mã_Sản_Phẩm" />
+          </Key>
+          <Property Name="Mã_Sản_Phẩm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tên_Sản_Phẩm" Type="ntext" />
+          <Property Name="Năm_Sản_Xuất" Type="int" />
+          <Property Name="Đơn_Giá" Type="float" />
+          <Property Name="Mã_Màu" Type="char" MaxLength="1" />
+          <Property Name="BIT_Kho_Hàng" Type="bit" />
+          <Property Name="Kho_Hàng" Type="ntext" />
+          <Property Name="Ảnh" Type="ntext" />
+          <Property Name="Size" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'D:\WFC\WFN_PMQL_SHOP GIAY DEP NAM05012023_CDBK_LTMT1_CĐ1\WFN_PMQL_SHOP GIAY DEP NAM05012023_CDBK_LTMT1_CĐ1\DATABASE1.MDF.dbo.Số_Sản_Phẩm_theo_Mã_Màu' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Số_Sản_Phẩm_theo_Mã_Màu">
+          <Property Name="Số_Sản_Phẩm" Type="int" />
+          <Property Name="Mã_Màu" Type="char" MaxLength="1" />
+        </EntityType>-->
+        <EntityContainer Name="Database1Model1StoreContainer">
+          <EntitySet Name="Sản_Phẩm" EntityType="Self.Sản_Phẩm" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Sản_Phẩm">
+          <Key>
+            <PropertyRef Name="Mã_Sản_Phẩm" />
+          </Key>
+          <Property Name="Mã_Sản_Phẩm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tên_Sản_Phẩm" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Năm_Sản_Xuất" Type="Int32" />
+          <Property Name="Đơn_Giá" Type="Double" />
+          <Property Name="Mã_Màu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="BIT_Kho_Hàng" Type="Boolean" />
+          <Property Name="Kho_Hàng" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ảnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Size" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sản_Phẩm" EntityType="Self.Sản_Phẩm" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1Model1StoreContainer" CdmEntityContainer="Database1Entities1">
+          <EntitySetMapping Name="Sản_Phẩm">
+            <EntityTypeMapping TypeName="Database1Model1.Sản_Phẩm">
+              <MappingFragment StoreEntitySet="Sản_Phẩm">
+                <ScalarProperty Name="Mã_Sản_Phẩm" ColumnName="Mã_Sản_Phẩm" />
+                <ScalarProperty Name="Tên_Sản_Phẩm" ColumnName="Tên_Sản_Phẩm" />
+                <ScalarProperty Name="Năm_Sản_Xuất" ColumnName="Năm_Sản_Xuất" />
+                <ScalarProperty Name="Đơn_Giá" ColumnName="Đơn_Giá" />
+                <ScalarProperty Name="Mã_Màu" ColumnName="Mã_Màu" />
+                <ScalarProperty Name="BIT_Kho_Hàng" ColumnName="BIT_Kho_Hàng" />
+                <ScalarProperty Name="Kho_Hàng" ColumnName="Kho_Hàng" />
+                <ScalarProperty Name="Ảnh" ColumnName="Ảnh" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sản_Phẩm">
+    <Key>
+      <PropertyRef Name="Mã_Sản_Phẩm" />
+    </Key>
+    <Property Name="Mã_Sản_Phẩm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tên_Sản_Phẩm" Type="ntext" />
+    <Property Name="Năm_Sản_Xuất" Type="int" />
+    <Property Name="Đơn_Giá" Type="float" />
+    <Property Name="Mã_Màu" Type="char" MaxLength="1" />
+    <Property Name="BIT_Kho_Hàng" Type="bit" />
+    <Property Name="Kho_Hàng" Type="ntext" />
+    <Property Name="Ảnh" Type="ntext" />
+    <Property Name="Size" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'D:\WFC\WFN_PMQL_SHOP GIAY DEP NAM05012023_CDBK_LTMT1_CĐ1\WFN_PMQL_SHOP GIAY DEP NAM05012023_CDBK_LTMT1_CĐ1\DATABASE1.MDF.dbo.Số_Sản_Phẩm_theo_Mã_Màu' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Số_Sản_Phẩm_theo_Mã_Màu">
+          <Property Name="Số_Sản_Phẩm" Type="int" />
+          <Property Name="Mã_Màu" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Sản_Phẩm" EntityType="Self.Sản_Phẩm" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Sản_Phẩm">
+      <EntityTypeMapping TypeName="Database1Model.Sản_Phẩm">
+        <MappingFragment StoreEntitySet="Sản_Phẩm">
+          <ScalarProperty Name="Mã_Sản_Phẩm" ColumnName="Mã_Sản_Phẩm" />
+          <ScalarProperty Name="Tên_Sản_Phẩm" ColumnName="Tên_Sản_Phẩm" />
+          <ScalarProperty Name="Năm_Sản_Xuất" ColumnName="Năm_Sản_Xuất" />
+          <ScalarProperty Name="Đơn_Giá" ColumnName="Đơn_Giá" />
+          <ScalarProperty Name="Mã_Màu" ColumnName="Mã_Màu" />
+          <ScalarProperty Name="BIT_Kho_Hàng" ColumnName="BIT_Kho_Hàng" />
+          <ScalarProperty Name="Kho_Hàng" ColumnName="Kho_Hàng" />
+          <ScalarProperty Name="Ảnh" ColumnName="Ảnh" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
